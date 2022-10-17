@@ -21,6 +21,14 @@ public class MyFirstScript : MonoBehaviour
         Debug.Log(string.Format("Tengo {0} puntos", points));
         Debug.Log(string.Format("Hola {0}, tienes {1} puntos", playerName, points));
         Debug.Log("Tengo " + points + " puntos");
-    } 
+        result = x + y;
+        Debug.Log(result);
+    }
+
+    public float x = 2;
+    public float y = 3;
+    private float result;
+    
+    
 
 }
