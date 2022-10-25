@@ -10,7 +10,11 @@ public class MyFirstScript : MonoBehaviour
     [SerializeField] private bool isGameOver = false;
 
     public string message = "Hola mundo.";
-    public int points = 256; 
+    public int points = 256;
+
+    public bool isRaining;
+
+    public Vector3 initialPos = new Vector3(1, 1, 1);
 
 
     private void Start()
@@ -23,6 +27,12 @@ public class MyFirstScript : MonoBehaviour
         Debug.Log("Tengo " + points + " puntos");
         result = x + y;
         Debug.Log(result);
+        if(isRaining == true)
+        {
+            Debug.Log("Recuerda coger paraguas para no mojarte");
+        }
+        transform.position = initialPos;
+
     }
 
     public float x = 2;
