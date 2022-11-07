@@ -9,8 +9,8 @@ public class Vehicle : MonoBehaviour
     [SerializeField] private bool isOn;
     [SerializeField] string sound;
     [SerializeField] float gasoline;
-
-
+    public bool canGetBigger;
+    
 
 
 
@@ -23,13 +23,25 @@ public class Vehicle : MonoBehaviour
         }
 
 
-        if (gasoline <= 10 && isOn == true) {
-                Debug.Log($"A {name} le queda muy poca gasoline");
-            } else if (isOn == true && gasoline > 10){
+        if (gasoline <= 10 && isOn == true)
+        {
+            Debug.Log($"A {name} le queda muy poca gasoline");
+        }
+        else if (isOn == true && gasoline > 10)
+        {
             Debug.Log($"{name} tiene suficiente gasolina");
-        }else
+        }
+        else
         {
             Debug.Log($"{name} no tiene coche disponible");
         }
-    } }
+    }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            transform.localScale += Vector3.one;
+        }
+    }
+}
