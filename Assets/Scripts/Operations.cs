@@ -5,6 +5,8 @@ using UnityEngine;
 public class Operations : MonoBehaviour
 {
 
+    public float x;
+    public float y;
 
     private void Calculator(float x, float y)
     {
